@@ -6,6 +6,20 @@ const {
   addDecoratorsLegacy,
   useBabelRc
 } = require('customize-cra')
+const addPrerenderSPAPlugin = config => {
+  if (process.env.NODE_ENV === 'production') {
+    const path = require('path')
+    const PrerenderSPAPlugin = require('prerender-spa-plugin')
+    config.plugins.push(
+      new PrerenderSPAPlugin({
+        staticDir: path.join(__dirname, 'build'),
+        routes: ['/']
+      })
+    )
+  }
+
+  return config
+}
 
 module.exports = override(
   fixBabelImports('import', {
@@ -15,9 +29,10 @@ module.exports = override(
   }),
   addLessLoader({
     javascriptEnabled: true,
-    modifyVars: { '@primary-color': '#1DA57A' }
+    modifyVars: { 'primary-color': '#f96900', 'link-color': '#f96900' }
   }),
   disableEsLint(),
   addDecoratorsLegacy(),
-  useBabelRc()
+  useBabelRc(),
+  addPrerenderSPAPlugin
 )
