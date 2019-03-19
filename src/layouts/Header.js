@@ -45,7 +45,7 @@ const menus = [
       {
         key: '3-1',
         text: '金融机构',
-        link: 'https://www.kezhiyin.com/solution/financial.html'
+        link: 'https://www.kezhiyin.com/insurance'
       },
       {
         key: '3-2',
@@ -74,14 +74,29 @@ const menus = [
 @withRouter
 export default class extends Component {
   state = {
-    current: '1',
+    current: '',
     visible: false,
-    isGhost: true
+    isGhost: true,
+    distance: 0
   }
 
   wrapperRef = React.createRef()
 
   componentDidMount() {
+    const {
+      body: { clientHeight },
+      location: { pathname }
+    } = document
+    switch (pathname) {
+      case '/':
+        this.setState({ current: '1', distance: 2 * clientHeight - 68 })
+        break
+      case '/insurance':
+        this.setState({ current: '3-1', distance: 492 })
+        break
+      default:
+        break
+    }
     window.addEventListener('scroll', this.handleMenu)
   }
 
@@ -90,16 +105,13 @@ export default class extends Component {
   }
 
   handleMenu = () => {
-    const { isGhost } = this.state
-    const {
-      body: { clientHeight }
-    } = document
+    const { isGhost, distance } = this.state
     const { top } = getScroll()
     const submenus = document.getElementsByClassName('ant-menu-submenu-title')
     const menus = document.getElementsByClassName('ant-menu-item')
     const selectedMenu = document.getElementsByClassName('ant-menu-item-selected')
 
-    if (top > 2 * clientHeight - 68) {
+    if (top > distance) {
       if (isGhost) {
         this.wrapperRef.current.style.borderColor = '#f0f0f0'
         this.wrapperRef.current.style.backgroundColor = '#ffffff'

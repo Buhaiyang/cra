@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
 import Home from '../pages/Home'
+import Insurance from '../pages/Insurance'
 import { BackTop } from 'antd'
 import './BasicLayout.less'
 
@@ -14,6 +15,7 @@ class BasicLayout extends Component {
           <Header />
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/insurance" component={Insurance} />
           </Switch>
           <Footer />
           <BackTop />

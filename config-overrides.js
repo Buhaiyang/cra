@@ -13,7 +13,7 @@ const addPrerenderSPAPlugin = config => {
     config.plugins.push(
       new PrerenderSPAPlugin({
         staticDir: path.join(__dirname, 'build'),
-        routes: ['/']
+        routes: ['/', '/insurance']
       })
     )
   }

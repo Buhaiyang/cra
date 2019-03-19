@@ -124,13 +124,13 @@ export default class extends Component {
               <h1 className="title-h1">行业解决方案</h1>
               <div>
                 <div ref={this.insuranceRef}>
-                  <a href="https://www.kezhiyin.com/solution/financial.html" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.kezhiyin.com/insurance" target="_blank" rel="noopener noreferrer">
                     <img src={Insurance} alt="客知音" />
                   </a>
-                  <a href="https://www.kezhiyin.com/solution/financial.html" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.kezhiyin.com/insurance" target="_blank" rel="noopener noreferrer">
                     <h1>保险</h1>
                   </a>
-                  <a href="https://www.kezhiyin.com/solution/financial.html" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.kezhiyin.com/insurance" target="_blank" rel="noopener noreferrer">
                     <Button>查看详情</Button>
                   </a>
                 </div>

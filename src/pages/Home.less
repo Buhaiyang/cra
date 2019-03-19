@@ -4,9 +4,17 @@
     overflow: hidden;
     .slick-slider {
       .banner-1, .banner-2, .sub_banner {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
         > img {
           width: 100vw;
           height: 100vh;
+          min-width: 800px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
         }
       }
       
@@ -82,6 +90,7 @@
 
   .fade-carousel {
     position: relative;
+    top: -1px;
     .slick-dots {
       display: none !important;
     }
@@ -172,7 +181,7 @@
         color: #f96900;
         font-size: 18px;
         line-height: 42px;
-        margin: 0 10px;
+        margin: 0 15px;
         &:hover {
           color: #ffffff;
           background-color: #f96900;

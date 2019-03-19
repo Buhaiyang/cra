@@ -1,0 +1,362 @@
+.insurance-wrapper {
+  .banner-content {
+    width: 100vw;
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    > div {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      top: 0;
+      > img {
+        width: 100vw;
+        min-width: 800px;
+        height: 560px;
+      }
+    }
+    > h1 {
+      color: #ffffff;
+      font-size: 48px;
+      line-height: 48px;
+      margin: 40px 0;
+      padding: 0 24px;
+      z-index: 1;
+    }
+    > h2 {
+      color: #ffffff;
+      font-size: 28px;
+      line-height: 28px;
+      margin-bottom: 50px;
+      padding: 0 24px;
+      z-index: 1;
+    }
+    > .ant-btn {
+      width: 120px;
+      height: 46px;
+      border-width: 2px;
+      border-radius: 23px;
+      border-color: #ffffff;
+      font-size: 18px;
+      line-height: 42px;
+      margin: 0 10px;
+      background-color: transparent;
+      color: #ffffff;
+      z-index: 1;
+      &:hover {
+        background-color: #f96900;
+        border-color: #f96900;
+      }
+    }
+  }
+
+  .custom-card-wrapper {
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#ffffff, #f9fcff);
+    .custom-card-content {
+      max-width: 1200px;
+      width: 100vw;
+      .title {
+        margin-bottom: 40px;
+        text-align: center;
+        > h2:first-child {
+          color: #222222;
+          font-size: 30px;
+          line-height: 30px;
+          margin-bottom: 30px;
+        }
+        > h2:last-child {
+          color: #3e424c;
+          font-size: 24px;
+          line-height: 24px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .business {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+    > div {
+      color: #000000;
+      text-align: center;
+      max-width: 400px;
+      margin-top: 60px;
+      > div {
+        margin: 0 20px;
+        background-color: #ffffff;
+        padding: 0 30px 30px;
+        min-height: 250px;
+        box-shadow: 0 1px 10px #dfe7ed;
+        position: relative;
+        > img {
+          position: relative;
+          left: 0;
+          top: -40px;
+          width: 80px;
+          height: 80px;
+          margin-bottom: -10px;
+        }
+        > h2 {
+          font-size: 24px;
+          line-height: 24px;
+          margin-bottom: 30px;
+        }
+        > div {
+          font-size: 20px;
+          text-align: left
+        }
+      }
+    }
+  }
+
+  .solution-wrapper {
+    .custom-card-content {
+      max-width: 1000px;
+      .title {
+        margin-bottom: -20px;
+      }
+    }
+  }
+
+  .solution {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-between;
+    > div {
+      max-width: 400px;
+      margin-top: 100px;
+      display: flex;
+      align-items: center;
+      > div {
+        padding: 0 30px;
+        text-align: center;
+        > img {
+          width: 80%;
+        }
+        > div {
+          text-align: left;
+          color: #000000;
+          > span {
+            display: block;
+            width: 60px;
+            height: 6px;
+            background-color: #f96900;
+          }
+          > h2 {
+            font-size: 24px;
+            line-height: 24px;
+            margin: 30px 0;
+          }
+          > div {
+            font-size: 20px;
+            > span {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .advantages-wrapper {
+    .custom-card-content {
+      max-width: 100vw;
+    }
+  }
+
+  .advantages {
+    overflow: hidden;
+    > div {
+      display: flex;
+      overflow-x: auto;
+      > div {
+        flex-shrink: 0;
+        width: 20vw;
+        height: 380px;
+        margin-right: -1px;
+        > div {
+          height: 100%;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 100% 100%;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: #ffffff;
+          > img {
+            width: 50px;
+            height: 54px;
+            display: block;
+            margin-bottom: 40px;
+            z-index: 1;
+          }
+          > h2 {
+            font-size: 24px;
+            line-height: 24px;
+            margin-bottom: 0;
+            color: #ffffff;
+            z-index: 1;
+          }
+          > div {
+            display: none;
+            margin-top: 50px;
+            padding: 0 20px;
+            font-size: 16px;
+            z-index: 1;
+            > span {
+              display: block;
+            }
+          }
+          &::after {
+            display: none;
+            content: '';
+            position: absolute;
+            width: 20vw;
+            height: 380px;
+            background-color: #f96900;
+            opacity: .5;
+            z-index: 0;
+          }
+          &:hover {
+            > div {
+              display: block;
+            }
+            &::after {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .analysis {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-between;
+    > div {
+      color: #000000;
+      text-align: center;
+      max-width: 320px;
+      width: 80vw;
+      min-width: 240px;
+      margin-top: 40px;
+      > div {
+        margin: 0 20px;
+        // background-color: #ffffff;
+        padding: 0 30px 30px;
+        min-height: 290px;
+        // box-shadow: 0 1px 10px #dfe7ed;
+        text-align: center;
+        > img {
+          width: 80px;
+          height: 80px;
+          margin-bottom: 40px;
+        }
+        > h2 {
+          font-size: 24px;
+          line-height: 24px;
+          margin-bottom: 30px;
+          color: #f96900;
+        }
+        > div {
+          font-size: 20px;
+          text-align: left;
+          display: flex;
+          justify-content: center;
+          > span {
+            > span {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .customer-wrapper {
+    .custom-card-content {
+      max-width: 1300px;
+      .title {
+        margin-bottom: 55px;
+      }
+    }
+  }
+
+  .customer {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    > div {
+      width: 300px;
+      text-align: center;
+      margin: 25px 0;
+      flex-grow: 1;
+      > img {
+        width: 180px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 799px) {
+    .solution, .analysis {
+      justify-content: center;
+    }
+    .advantages {
+      > div {
+        margin: 0 24px 0 12px;
+        > div {
+          flex-shrink: 0;
+          width: 65vw;
+          height: 50vh;
+          margin: 0 12px;
+          > div {
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+            > img {
+              margin-bottom: 20px;
+            }
+            > div {
+              display: block;
+              margin-top: 10px;
+            }
+            &:hover {
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .customer {
+      > div {
+        width: auto;
+        padding: 0 24px;
+        > img {
+          width: 120px;
+        }
+      }
+    }
+  }
+
+}
